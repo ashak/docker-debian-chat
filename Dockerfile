@@ -12,5 +12,5 @@ FROM ashak/debian-mosh
 COPY --from=builder /usr/local/share/tf-lib /usr/local/share/tf-lib
 COPY --from=builder /usr/local/bin/tf /usr/local/bin/tf5
 RUN apt-get update \
- && apt-get -y install ca-certificates irssi locales \
+ && apt-get -y install ca-certificates irssi \
  && rm -rf /var/lib/apt/lists/*
