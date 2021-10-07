@@ -1,7 +1,7 @@
 FROM debian:stable as builder
 RUN apt-get update \
  && apt-get -y install build-essential git libicu-dev
-RUN git clone https://github.com/ingwarsw/tinyfugue.git \
+RUN git clone https://github.com/kruton/tinyfugue.git \
  && cd tinyfugue \
  && apt-get install -y libgnutls28-dev libncurses5-dev libpcre3-dev pkg-config zlib1g-dev \
  && ./configure \
