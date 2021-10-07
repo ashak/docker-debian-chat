@@ -10,8 +10,8 @@ RUN echo "deb-src http://ftp.uk.debian.org/debian/ stable main contrib non-free"
  && ls
 
 FROM ashak/debian-mosh
-COPY --from=builder /tf5_5.0beta8-10_amd64.deb /
+COPY --from=builder /tf5_5.0beta8-*_*.deb /
 RUN apt-get update \
  && apt-get -y install ca-certificates irssi \
- && apt-get -y install /tf5_5.0beta8-10_amd64.deb \
+ && apt-get -y install /tf5_5.0beta8-*_*.deb \
  && rm -rf /var/lib/apt/lists/*
